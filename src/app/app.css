@@ -1,0 +1,12 @@
+.baground-card{
+	background-color: black;
+}
+
+.red-card{
+	color: red;
+}
+
+.life-bar {
+	background-color: red;
+	width: 30px;
+}
