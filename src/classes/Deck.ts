@@ -1,6 +1,7 @@
 import ICard from "./../interfaces/ICard";
 
 export default class Deck {
+	private _maxCardsCount:number = 52;
 	private _cards:ICard[];
 	private _cardRanks:string[] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 	private _cardSuits:string[] = ["♡", "♤", "♧", "♢"];
@@ -28,6 +29,14 @@ export default class Deck {
 		console.log("Deck instantiated.");
 		this._cards = [];
 		this._buildCards();
+	}
+
+	public getCardCount() {
+		return this._cards.length;
+	}
+
+	public getMaxCardCount(){
+		return this._maxCardsCount
 	}
 
 	public drawCard() {
